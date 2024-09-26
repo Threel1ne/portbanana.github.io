@@ -1,20 +1,32 @@
-
 import type { MetaFunction } from "@remix-run/node";
 import { motion } from "framer-motion";
 import Navbar from "./components/navbar";
 
 export default function Index() {
   return (
-    <div className="flex h-screen justify-center bg-gray-50">
+    <div className="flex h-screen justify-center">
       <div className="flex flex-col gap-16 items-center">
         <Navbar />
-        <motion.img  
-        className="rounded-full w-56 h-56 border-4 border-black"  
-        src="/images/portpic.jpg" 
-        initial={{ opacity: 0, scale: 0.8}}
-        animate={{ opacity: 1, scale: 1}}
-        transition={{ duration: 0.7, ease: "easeOut" }}/>
-
+        <div className="relative w-64 h-64">
+          <motion.div
+            className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 rounded-full"
+            initial={{ opacity: 0, scale: 1.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          />
+          <motion.div
+            className="absolute inset-1 bg-white rounded-full overflow-hidden"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
+            <img
+              src="/images/portpic.jpg"
+              alt="Profile"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+        </div>
         <motion.h1
           className="font-bold text-6xl drop-shadow-lg text-transparent
             bg-clip-text bg-gradient-to-r from-blue-600 
@@ -38,10 +50,18 @@ export default function Index() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-        >I've interested in robotics, When I was 8 years old ,Because my gradpa buy me some robotics kits, So  that make me fell in love with robotics
+        >
+          My interest in robotics began at the age of eight when my grandfather
+          gifted me several robotics kits. This early exposure sparked a passion
+          for the field that has continued to grow ever since.{" "}
         </motion.p>
+        <div className="flex gap-32 items-center text-xl">
+          <a href="">test</a>
+          <a href="">test</a>
+          <a href="">test</a>
+          <a href="">test</a>
+        </div>
       </div>
     </div>
   );
 }
-
