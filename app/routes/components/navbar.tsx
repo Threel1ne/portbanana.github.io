@@ -5,9 +5,9 @@ export default function Navbar() {
   return (
     <motion.div
       className="flex gap-8 rounded-full border-2 border-black p-4 items-center justify-center mt-3 drop-shadow-lg"
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.7, ease: "easeOut" }}
+      initial={{ opacity: 0, x: -40 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5}}
     >
       <motion.a
         href="#"

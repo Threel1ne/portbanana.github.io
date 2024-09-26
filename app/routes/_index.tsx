@@ -1,6 +1,8 @@
 import type { MetaFunction } from "@remix-run/node";
 import { motion } from "framer-motion";
 import Navbar from "./components/navbar";
+import { CgFileDocument } from "react-icons/cg";
+import { AiOutlineGithub } from "react-icons/ai";
 
 export default function Index() {
   return (
@@ -31,9 +33,9 @@ export default function Index() {
           className="font-bold text-6xl drop-shadow-lg text-transparent
             bg-clip-text bg-gradient-to-r from-blue-600 
             via-green-500 to-indigo-400 mt-10"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           Hi! I'm{" "}
           <motion.span
@@ -47,20 +49,32 @@ export default function Index() {
         </motion.h1>
         <motion.p
           className="font-semibold text-4xl text-center w-[50%]"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
         >
           My interest in robotics began at the age of eight when my grandfather
           gifted me several robotics kits. This early exposure sparked a passion
           for the field that has continued to grow ever since.{" "}
         </motion.p>
         <div className="flex gap-32 items-center text-xl">
-          <a href="">test</a>
-          <a href="">test</a>
-          <a href="">test</a>
-          <a href="">test</a>
-        </div>
+          <a href="" className="flex items-center gap-1">
+            <CgFileDocument />
+            <span>Resume</span>
+          </a>
+          <a href="" className="flex items-center gap-1">
+            {/* <SomeIcon /> */}
+            <span>Github</span>
+          </a>
+          <a href="" className="flex items-center gap-1">
+            {/* <AnotherIcon /> */}
+            <span>Instagram</span>
+          </a>
+          <a href="" className="flex items-center gap-1">
+            {/* <YetAnotherIcon /> */}
+            <span>Reddit</span>
+          </a>
+        </div>{" "}
       </div>
     </div>
   );
