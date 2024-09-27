@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <>
-      <div className="relative w-12 h-12 md:w-64 md:h-64">
+      <div className="relative w-32 h-32 md:w-64 md:h-64">
         <motion.div
           className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 rounded-full"
           initial={{ opacity: 0, scale: 1.5 }}
@@ -24,7 +24,7 @@ export default function Hero() {
         </motion.div>
       </div>
       <motion.h1
-        className="font-bold xl md:text-6xl drop-shadow-lg text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 mt-10"
+        className="font-semibold md:font-bold text-xl md:text-6xl drop-shadow-lg text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 mt-10"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
