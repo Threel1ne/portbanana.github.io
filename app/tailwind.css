@@ -2,8 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px; /* Adjust the height as needed */
+  transform-origin: 0%;
+  z-index: 100;
 }
