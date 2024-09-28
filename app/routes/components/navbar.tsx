@@ -7,7 +7,7 @@ const Navbar = ({ isOpen, toggleMenu }) => {
   return (
     <>
       <motion.nav
-        className="relative w-full lg:w-1/3 flex items-center justify-end lg:justify-center  rounded-full lg:border-2 lg:border-black p-4 mt-3 drop-shadow-lg"
+        className="relative w-full md:w-1/2 lg:w-1/3 flex items-center justify-end md:justify-center  rounded-full md:border-2 md:border-black p-4 mt-3 drop-shadow-lg"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -15,7 +15,7 @@ const Navbar = ({ isOpen, toggleMenu }) => {
         {/* Logo or Brand Name */}
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex gap-8 items-center justify-center">
+        <div className="hidden md:flex gap-8 items-center justify-center">
           {menuItems.map((item) => (
             <motion.a
               key={item}
@@ -30,7 +30,7 @@ const Navbar = ({ isOpen, toggleMenu }) => {
 
         {/* Hamburger Menu */}
         <motion.div
-          className="lg:hidden cursor-pointer z-50"
+          className="md:hidden cursor-pointer z-50"
           onClick={toggleMenu}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}

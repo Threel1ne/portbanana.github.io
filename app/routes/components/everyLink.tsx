@@ -7,7 +7,7 @@ export default function EveryLink() {
   return (
     <>
       <motion.div
-        className="flex flex-wrap justify-center gap-8 md:gap-32 items-center text-xl"
+        className="flex flex-wrap justify-center gap-8 md:gap-32 items-center text-sm md:text-xl"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.6 }}
