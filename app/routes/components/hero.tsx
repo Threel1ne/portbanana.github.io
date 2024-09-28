@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <>
-      <div className="relative w-32 h-32 md:w-64 md:h-64">
+      <div className="relative w-36 h-36 md:w-64 md:h-64">
         <motion.div
           className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 rounded-full"
           initial={{ opacity: 0, scale: 1.5 }}
@@ -23,8 +23,9 @@ export default function Hero() {
           />
         </motion.div>
       </div>
+
       <motion.h1
-        className="font-semibold md:font-bold text-xl md:text-6xl drop-shadow-lg text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 mt-10"
+        className="font-semibold md:font-bold text-xl md:text-6xl drop-shadow-lg text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 md:mt-10"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
@@ -39,8 +40,9 @@ export default function Hero() {
         </motion.span>{" "}
         :)
       </motion.h1>
+
       <motion.p
-        className="font-semibold text-4xl text-center w-[50%]"
+        className="font-medium text-md md:text-3xl md:font-bold text-center w-[65%] md:w-[50%]"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
