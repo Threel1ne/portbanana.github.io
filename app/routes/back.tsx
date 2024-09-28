@@ -20,7 +20,7 @@ export default function Index() {
   return (
     <>
       <motion.div
-        className="progress-bar fixed top-0 left-0 h-1 md:h-2 right-0 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% z-50"
+        className="progress-bar fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% z-50"
         style={{ scaleX: scaleX }}
       />
       <div
