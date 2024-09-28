@@ -6,6 +6,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
+import SmoothScroll from "./routes/components/SmoothScroll";
 
 import "./tailwind.css";
 
@@ -32,9 +33,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
+        <SmoothScroll>
+          {children}
+          <ScrollRestoration />
+          <Scripts />
+        </SmoothScroll>
       </body>
     </html>
   );

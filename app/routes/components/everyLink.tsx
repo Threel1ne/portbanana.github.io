@@ -1,9 +1,42 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 import { PiCertificate } from "react-icons/pi";
 import { FaWrench } from "react-icons/fa6";
 import { LiaAwardSolid } from "react-icons/lia";
-
+import Lenis from "lenis";
 export default function EveryLink() {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    const raf = (time) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+
+    requestAnimationFrame(raf);
+
+    // Intercept anchor click events to use Lenis for smooth scrolling
+    const handleAnchorClick = (e) => {
+      e.preventDefault();
+      const targetId = e.currentTarget.getAttribute("href");
+      if (targetId.startsWith("#")) {
+        lenis.scrollTo(targetId);
+      }
+    };
+
+    // Add event listeners to anchor links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", handleAnchorClick);
+    });
+
+    // Cleanup listeners and destroy Lenis on unmount
+    return () => {
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.removeEventListener("click", handleAnchorClick);
+      });
+      lenis.destroy();
+    };
+  }, []);
   return (
     <>
       <motion.div
