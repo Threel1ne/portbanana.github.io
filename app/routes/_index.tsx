@@ -4,6 +4,7 @@ import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import EveryLink from "./components/everyLink";
 import ImageSlideRevealGrid from "./components/ImageSlideRevealGrid";
+import Cer from "./components/Certificate";
 
 export default function Index() {
   const { scrollYProgress } = useScroll();
