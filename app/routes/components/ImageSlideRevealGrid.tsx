@@ -5,7 +5,7 @@ const ImageSlideReveal = ({ imageSrc, altText, date, title, description }) => {
     <section id="competition">
       <div className="relative w-full aspect-square overflow-hidden group  shadow-lg">
         <motion.div
-          className="absolute inset-0 transition-transform duration-300 ease-in-out group-hover:translate-x-full"
+          className="absolute inset-0 transition-transform rounded-md duration-300 ease-in-out group-hover:translate-x-full"
           initial={{ opacity: 0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
@@ -13,7 +13,7 @@ const ImageSlideReveal = ({ imageSrc, altText, date, title, description }) => {
         >
           <img
             src={imageSrc}
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full rounded-lg"
             alt={altText}
           />
         </motion.div>
@@ -30,7 +30,7 @@ const ImageSlideReveal = ({ imageSrc, altText, date, title, description }) => {
 
             <p className="text-xl font-bold text-white sm:text-2xl">{title} </p>
           </div>
-          <div className="absolute inset-0 bg-gray-800 bg-opacity-75 text-white p-4 flex items-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="absolute inset-0 bg-gray-800 bg-opacity-75 text-white p-4 flex rounded-md items-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p className="font-semibold font-prompt text-sm md:text-lg">
               {description}
             </p>

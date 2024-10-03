@@ -1,10 +1,11 @@
 import { useState } from "react";
+import LazyLoad from "react-lazyload";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import EveryLink from "./components/everyLink";
 import ImageSlideRevealGrid from "./components/ImageSlideRevealGrid";
-import Cer from "./components/Certificate";
+import Contact from "./components/contact";
 
 export default function Index() {
   const { scrollYProgress } = useScroll();
@@ -20,19 +21,22 @@ export default function Index() {
   console.log(isOpen);
   return (
     <>
-      <motion.div
-        className="progress-bar fixed top-0 left-0 h-1 md:h-2 right-0 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% z-50"
-        style={{ scaleX: scaleX }}
-      />
-      <div
-        className={`flex flex-col gap-16 items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`}
-      >
-        {" "}
-        <Navbar isOpen={isOpen} toggleMenu={toggleMenu} />
-        <Hero />
-        <EveryLink />
-        <ImageSlideRevealGrid />
-      </div>
+      <LazyLoad hedight={200}>
+        <motion.div
+          className="progress-bar fixed top-0 left-0 h-1 md:h-2 right-0 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% z-50"
+          style={{ scaleX: scaleX }}
+        />
+        <div
+          className={`flex flex-col gap-16 items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`}
+        >
+          <Navbar isOpen={isOpen} toggleMenu={toggleMenu} />
+          <Hero />
+          <EveryLink />
+          <ImageSlideRevealGrid />
+        </div>
+
+        <Contact />
+      </LazyLoad>
     </>
   );
 }

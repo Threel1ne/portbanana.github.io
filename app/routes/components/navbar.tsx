@@ -2,7 +2,7 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = ({ isOpen, toggleMenu }) => {
-  const menuItems = ["Home", "About", "Services", "Contact"];
+  const menuItems = ["home", "about", "contact"];
 
   return (
     <>
@@ -19,9 +19,9 @@ const Navbar = ({ isOpen, toggleMenu }) => {
           {menuItems.map((item) => (
             <motion.a
               key={item}
-              href="#"
+              href={`#${item}`}
               whileHover={{ scale: 1.1, rotate: 5 }}
-              className="text-black hover:text-gray-500 transition duration-300"
+              className="text-black uppercase hover:text-gray-500 transition duration-300"
             >
               {item}
             </motion.a>

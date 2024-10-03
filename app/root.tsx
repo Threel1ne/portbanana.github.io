@@ -5,8 +5,11 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+
+import React, { useState, useEffect } from "react";
 import type { LinksFunction } from "@remix-run/node";
 import SmoothScroll from "./routes/components/SmoothScroll";
+import SplashScreen from "./SplashScreen";
 
 import "./tailwind.css";
 
@@ -32,7 +35,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="tri">
         <SmoothScroll>
           {children}
           <ScrollRestoration />
@@ -44,5 +47,21 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2500); // Simulate loading time
+    return () => clearTimeout(timer);
+  }, []);
+  return (
+    <>
+      {loading ? (
+        <SplashScreen />
+      ) : (
+        <div>
+          <Outlet />
+        </div>
+      )}
+    </>
+  );
 }

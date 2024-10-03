@@ -11,17 +11,21 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@motionone/utils": "^10.18.0",
     "@remix-run/node": "^2.12.1",
     "@remix-run/react": "^2.12.1",
     "@remix-run/serve": "^2.12.1",
     "@studio-freight/lenis": "^1.0.42",
     "framer-motion": "^11.5.6",
+    "gsap": "^3.12.5",
     "isbot": "^4.1.0",
     "lenis": "^1.1.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.3.0",
-    "react-scroll": "^1.9.0"
+    "react-lazyload": "^3.2.1",
+    "react-scroll": "^1.9.0",
+    "typed.js": "^2.1.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.12.1",
