@@ -73,7 +73,7 @@ const Navbar = ({ isOpen, toggleMenu }) => {
               {menuItems.map((item, index) => (
                 <motion.a
                   key={item}
-                  href="#"
+                  href={`#${item}`}
                   className="block text-4xl uppercase font-bold my-8 text-white hover:text-gray-300 transition duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
