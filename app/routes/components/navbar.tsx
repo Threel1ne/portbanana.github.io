@@ -74,7 +74,7 @@ const Navbar = ({ isOpen, toggleMenu }) => {
                 <motion.a
                   key={item}
                   href="#"
-                  className="block text-4xl font-bold my-8 text-white hover:text-gray-300 transition duration-300"
+                  className="block text-4xl uppercase font-bold my-8 text-white hover:text-gray-300 transition duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
