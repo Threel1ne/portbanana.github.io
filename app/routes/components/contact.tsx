@@ -20,7 +20,7 @@ export default function Contact() {
         </div>
 
         <a
-          href="https://github.com/yourgithubprofile"
+          href="https://github.com/AchxBanana"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-4"
