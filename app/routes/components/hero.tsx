@@ -17,7 +17,7 @@ export default function Hero() {
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <img
-            src="/images/portpic.jpg"
+            src="/images/pfp.jpg"
             alt="Profile"
             className="w-full h-full object-cover"
           />
@@ -36,7 +36,7 @@ export default function Hero() {
           whileHover={{ scale: 1.2, color: "#ff6347" }}
           transition={{ type: "spring", stiffness: 300 }}
         >
-          Pasitthichai
+          Linux nerd
         </motion.span>{" "}
         :)
       </motion.h1>
@@ -47,10 +47,8 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
       >
-        My interest in <span className="text-red-700">Robotics</span> began at
-        the age of eight when my grandfather gifted me several robotics kits.
-        This early exposure sparked a passion for the field that has continued
-        to grow ever since.
+        "In a world dominated by ones and zeros, I'm a digital alchemist,
+        turning pixels into magic."{" "}
       </motion.p>
     </>
   );

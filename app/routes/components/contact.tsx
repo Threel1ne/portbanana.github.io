@@ -15,7 +15,7 @@ export default function Contact() {
             href="mailto:achxpj@gmail.com"
             className="text-xl font-inter uppercase font-semibold md:font-bold lg:font-bold md:text-4xl lg:text-4xl text-gray-800 border-b-2 border-gray-800 border-opacity-70 text-opacity-70 hover:text-opacity-100 hover:border-opacity-100 transition duration-300"
           >
-            achxpj@gmail.com
+            AHHHH@eieizaza
           </a>
         </div>
 
@@ -30,9 +30,7 @@ export default function Contact() {
           </button>
         </a>
 
-        <p className="mt-10 text-center text-lg text-gray-600">
-          Be the one in KMITL
-        </p>
+        <p className="mt-10 text-center text-lg text-gray-600">huhuhuhuh</p>
       </motion.div>
     </section>
   );

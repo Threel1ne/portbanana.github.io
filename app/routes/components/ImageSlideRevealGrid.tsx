@@ -44,18 +44,18 @@ const ImageSlideReveal = ({ imageSrc, altText, date, title, description }) => {
 const ImageSlideRevealGrid = () => {
   const images = [
     {
-      src: "/images/work3.jpg",
+      src: "/images/present.jpg",
       alt: "ROS",
       date: "2024",
-      title: "ROS_Teaching",
-      description: "สอนเพื่อนๆใช้ ROS2 เพื่อนำไปต่อยอดในการสอบและการทำโปรเจค",
+      title: "ERR 404",
+      description: "I wanna die pls helpppp!!",
     },
     {
-      src: "/images/work4.jpeg",
+      src: "/images/present2.jpg",
       alt: "WebApp com",
       date: "2024",
-      title: "Web_App",
-      description: "แข่งเขียนเว็บแอปได้ที่2 โดยใช้ภาษา PHP และ SQL",
+      title: "python to hell",
+      description: "I love CPP So much",
     },
   ];
 
