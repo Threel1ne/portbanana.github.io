@@ -46,14 +46,14 @@ const ImageSlideRevealGrid = () => {
     {
       src: "/images/present.jpg",
       alt: "ROS",
-      date: "2024",
+      date: "2025",
       title: "ERR 404",
       description: "I wanna die pls helpppp!!",
     },
     {
       src: "/images/present2.jpg",
       alt: "WebApp com",
-      date: "2024",
+      date: "2025",
       title: "python to hell",
       description: "I love CPP So much",
     },
