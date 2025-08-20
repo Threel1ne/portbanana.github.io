@@ -12,15 +12,15 @@ export default function Contact() {
       >
         <div className="text-center">
           <a
-            href="mailto:achxpj@gmail.com"
+            href="mailto:contact@threelines.online"
             className="text-xl font-inter uppercase font-semibold md:font-bold lg:font-bold md:text-4xl lg:text-4xl text-gray-800 border-b-2 border-gray-800 border-opacity-70 text-opacity-70 hover:text-opacity-100 hover:border-opacity-100 transition duration-300"
           >
-            AHHHH@eieizaza
+            contact@eieizaza
           </a>
         </div>
 
         <a
-          href="https://github.com/AchxBanana"
+          href="https://github.com/Threel1ne"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-4"
@@ -29,6 +29,18 @@ export default function Contact() {
             GitHub
           </button>
         </a>
+
+        <a
+          href="https://threelines.online"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4"
+        >
+          <button className="px-6 py-3 text-lg font-bold text-white bg-gray-800 hover:bg-gray-900 rounded-md transition duration-300">
+            Website
+          </button>
+        </a>
+
 
         <p className="mt-10 text-center text-lg text-gray-600">huhuhuhuh</p>
       </motion.div>
